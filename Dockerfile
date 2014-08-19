@@ -1,7 +1,6 @@
-FROM conyac/base
+FROM conyac/base:latest
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server pwgen
+RUN apt-get update && apt-get -y install mysql-server pwgen
 
 RUN rm -rf /var/lib/mysql/*
 
